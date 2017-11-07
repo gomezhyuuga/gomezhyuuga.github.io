@@ -1,0 +1,299 @@
+*, *:before, *:after {
+  /* Chrome 9-, Safari 5-, iOS 4.2-, Android 3-, Blackberry 7- */
+  -webkit-box-sizing: border-box; 
+
+  /* Firefox (desktop or Android) 28- */
+  -moz-box-sizing: border-box;
+
+  /* Firefox 29+, IE 8+, Chrome 10+, Safari 5.1+, Opera 9.5+, iOS 5+, Opera Mini Anything, Blackberry 10+, Android 4+ */
+  box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Work+Sans:100,200,300,400,500,600,700,800,900');
+
+$phi: 1.6180339887498948482;
+$sidebar-width: 340px;
+
+$font-stack: 'Work Sans', Helvetica, sans-serif;
+$font-light: 200;
+$font-regular: 300;
+$font-bold: 600;
+
+$primary-color: #2C3E50;
+$color-accent:  #FC4349;
+$color-secondary: #6DBCDB;
+$color-blue: #6DBCDB;
+$color-orange: #FC9943;
+$color-gray: #BDBDBD;
+
+$item-width: 250px;
+$item-height: $item-width * 0.7;
+
+
+body {
+  background-color: #FFFFFF;
+  height: 100vh;
+  display: flex;
+  font-family: $font-stack;
+  font-weight: $font-regular;
+  font-size: 16px;
+  line-height: 18px;
+}
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+.devicons {
+   &-ruby_rough { color: $color-accent; }
+   &-python { color: change-color($color-accent, $hue: 90); }
+   &-react { color: change-color($color-accent, $hue: 190); }
+   &-javascript_badge { color: change-color($color-accent, $hue: 50); }
+   &-illustrator { color: change-color($color-accent, $hue: 40); }
+   &-html5 { color: change-color($color-accent, $hue: 15); }
+   &-ubuntu { color: change-color($color-accent, $hue: 15); }
+   &-vim { color: change-color($color-accent, $hue: 78); }
+   &-angular { color: $color-accent; }
+   &-apple { color: #FFF; }
+   &-linux { color: #FFF; }
+   opacity: 0.9;
+   @include transition(opacity .2s ease);
+   &:hover {
+     opacity: 1.0;
+   }
+}
+
+.center { text-align: center; }
+
+#page-content {
+  display: flex;
+  flex: 1;
+  position: relative;
+  padding: 4em 3em;
+  overflow: scroll;
+
+  .single-flag span {
+    background: $color-orange;
+    width: 100%;
+  }
+}
+
+#portfolio {
+  width: 100%;
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .item {
+    border: 1px solid $primary-color;
+    border-radius: 4px;
+    width: $item-width;
+    height: $item-height;
+    margin: 1em;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    aside {
+      height: 40px;
+      font-size: 14px;
+      font-weight: $font-regular;
+      line-height: 40px;
+      color: $color-gray;
+      position: absolute;
+      bottom: 0;
+      padding-left: 1em;
+      width: 100%;
+      background-color: $primary-color;
+
+      .features {
+        position: absolute;
+        right: 1em;
+      }
+      .date {
+        position: absolute;
+        right: 10px;
+        font-size: 10px;
+        font-weight: $font-bold;
+        opacity: 0.5;
+      }
+
+      .devicons {
+        position: relative;
+        top: 4px;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+#sidebar {
+  position: relative;
+  padding: 2em;
+  display: flex !important;
+  align-items: stretch;
+  display: flex;
+  flex: initial;
+  flex-direction: column;
+  justify-content: center;
+  color: #FFF;
+  background-color: $primary-color;
+  width: 340px;
+
+  .brand {
+    margin-top: 4em;
+    display: flex;
+    align-items: center;
+    .logo {
+      background-repeat: no-repeat;
+      background-position-y: 3px;
+      width: 80px;
+      height: 80px;
+      background-image: url('/assets/img/logo.png');
+      background-size: contain;
+      margin-right: 5px;
+    }
+    .name {
+      * { display: block; }
+      strong {
+        font-size: 18px;
+        font-weight: $font-bold;
+        text-align: justify;
+        letter-spacing: 1.5px;
+        margin-bottom: 4px;
+      }
+      small {
+        font-weight: $font-light;
+        font-size: 12px;
+        color: $color-secondary;
+        text-align: center;
+        letter-spacing: 2px;
+      }
+    }
+  }
+
+  .info p {
+    font-size: 14px;
+    color: #D7DADB;
+    font-weight: $font-light;
+    font-family: Montserrat;
+
+    &.feature {
+      display: flex;
+      justify-content: center;
+      font-size: 2em;
+      text-align: center;
+      font-weight: 800;
+      letter-spacing: 6px;
+      color: #FFF;
+      opacity: 0.3;
+      line-height: 32px;
+      .devicons {
+        margin: 0 14px;
+        min-width: 32px;
+        max-width: 32px;
+        width: 32px;
+        height: 32px;
+        max-height: 32px;
+        min-height: 32px;
+        position: relative;
+        color: #FFF;
+
+        &.animated { display: none; }
+        &.animated.active { display: inline }
+      }
+    }
+  }
+
+  nav {
+    border-top: 1px solid $color-accent;
+    border-bottom: 1px solid $color-accent;
+    padding: 3em 0;
+    margin-top: 4em;
+    ul, li {
+      list-style: none;
+      display: inline;
+      margin: 0;
+      padding: 0;
+    }
+    ul {
+      display: flex;
+      justify-content: space-around;
+    }
+    a {
+      text-decoration: none;
+      color: $color-secondary;
+      font-weight: $font-bold;
+      font-size: 14px;
+      text-transform: uppercase;
+
+      &.active { color: $color-accent; }
+    }
+
+    .submenu {
+      margin-top: 1em;
+      justify-content: space-between;
+      a {
+        font-weight: $font-light;
+        font-size: 12px;
+        color: $color-gray;
+        text-transform: capitalize;
+
+        &.active {
+          font-weight: $font-regular;
+          color: #FFF;
+        }
+      }
+    }
+  }
+
+  .social {
+    padding: 3em 0;
+    color: $color-orange;
+    font-size: 32px;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.flag-container {
+  position: absolute;
+  left: 0;
+  top: -1px;
+  line-height: 0px;
+  height: 4px;
+  width: 100%;
+  div {
+    height: 100%;
+    width: 100%;
+  }
+  span {
+    height: 101%;
+    border: 1px solid $primary-color;
+    display: inline-block;
+  }
+}
+.mexican-flag {
+  span {
+    &:nth-child(1) {
+      width: 10%;
+      background-color: #9CFC43;
+    }
+    &:nth-child(2) {
+      width: 20%;
+      background-color: #FFF;
+    }
+    &:nth-child(3) {
+      background-color: $color-accent;
+      width: 70%;
+    }
+  }
+}
+
+

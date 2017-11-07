@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% include head.html %}
+
+  <body>
+
+    {% include sidebar.html %}
+
+    <main id="page-content">
+      <div class="flag-container">
+        <div class="single-flag">
+          <span></span>
+        </div>
+      </div>
+        {{ content }}
+    </main>
+
+
+  <script src="{{ "/assets/js/main.js" | relative_url }}"></script>
+
+  </body>
+
+</html>
+
