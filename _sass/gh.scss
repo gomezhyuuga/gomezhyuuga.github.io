@@ -28,6 +28,7 @@ $color-gray: #BDBDBD;
 $item-width: 250px;
 $item-height: $item-width * 0.7;
 
+$breakpoint-tablet: 768px;
 
 body {
   background-color: #FFFFFF;
@@ -37,6 +38,9 @@ body {
   font-weight: $font-regular;
   font-size: 16px;
   line-height: 18px;
+  @media screen and (max-width: $breakpoint-tablet - 1px) {
+    flex-flow: column;
+  }
 }
 @mixin transition($args...) {
   -webkit-transition: $args;
@@ -73,6 +77,9 @@ body {
   position: relative;
   padding: 4em 3em;
   overflow: scroll;
+  @media screen and (max-width: $breakpoint-tablet - 1px) {
+    overflow: visible;
+  }
 
   .single-flag span {
     background: $color-orange;
@@ -135,6 +142,9 @@ body {
 }
 
 #sidebar {
+  @media screen and (max-width: $breakpoint-tablet - 1px) {
+    width: 100%;
+  }
   * { color: #FFF; }
   position: relative;
   padding: 2em;
@@ -148,6 +158,10 @@ body {
   width: 340px;
 
   .brand {
+    @media screen and (max-width: $breakpoint-tablet - 1px) {
+      margin: 1em 0;
+      justify-content: center;
+    }
     margin: 4em 0 1em 0;
     display: flex;
     align-items: center;
@@ -212,6 +226,10 @@ body {
   }
 
   nav {
+    @media screen and (max-width: $breakpoint-tablet - 1px) {
+      margin-top: 0;
+      padding: 1.5em 0;
+    }
     border-top: 1px solid $color-accent;
     border-bottom: 1px solid $color-accent;
     padding: 3em 0;
@@ -254,6 +272,9 @@ body {
   }
 
   .social {
+    @media screen and (max-width: $breakpoint-tablet - 1px) {
+      padding: 1em 0 0.5em 0;
+    }
     i { color: $color-orange; }
     padding: 2em 0;
     font-size: 32px;
