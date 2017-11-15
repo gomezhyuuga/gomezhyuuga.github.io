@@ -1,5 +1,6 @@
 ---
 title: Hycons
+link: https://gomezhyuuga.deviantart.com/art/Hycons-snap-14-07-11-169638293
 categories: portfolio design
-tools: [ illustrator, apple, ubuntu ]
+tools: [ dev-illustrator, dev-windows, dev-apple, linux-ubuntu_inverse ]
 ---

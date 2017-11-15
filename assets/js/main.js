@@ -1,11 +1,10 @@
 $(document).ready(() => {
-  console.log("IT WORKS");
-  let icons = $('.animated.devicons');
+  let icons = $('.animated.nf');
   var index = 1;
   const limit = icons.length - 1;
   setInterval(() => {
     if (index > limit) { index = 0; }
-    let el = $('.animated.devicons.active');
+    let el = $('.animated.nf.active');
     let next = $(icons.get(index));
     el.removeClass('fadeOut active');
     $(next).addClass('fadeIn active');
