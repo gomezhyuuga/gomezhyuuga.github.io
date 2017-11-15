@@ -282,7 +282,11 @@ body {
     @media screen and (max-width: $breakpoint-tablet - 1px) {
       padding: 1em 0 0.5em 0;
     }
-    i { color: $color-orange; }
+    i {
+      color: #5F6C7A;
+      @include transition(color .3s ease);
+      &:hover { color: #FFF; }
+    }
     padding: 2em 0;
     font-size: 32px;
     display: flex;
