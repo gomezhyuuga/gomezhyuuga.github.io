@@ -15,10 +15,13 @@
       </div>
 
       <div id="portfolio">
+        <h1>Portfolio</h1>
         <div class="wrapper">
         {% for project in site.categories.portfolio %}
           <div class="item">
-            <img src="{{ "/assets/img/projects/" | append: project.permalink }}/thumbnail.png" />
+            <a href="{{ project.link }}" target="_blank" rel="follow">
+              <img src="{{ "/assets/img/projects/" | append: project.permalink }}/thumbnail.png" />
+            </a>
             <aside>
               <div class="features">
                 {% for feature in project.tools %}

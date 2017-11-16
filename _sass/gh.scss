@@ -55,10 +55,12 @@ body {
 }
 
 .nf {
-   &-dev-ruby_rough { color: $color-accent; }
+   &-dev-ruby_rough, &-oct-ruby { color: $color-accent; }
+   &-dev-ruby_on_rails { color: $color-accent; }
    &-dev-python { color: change-color($color-accent, $hue: 90); }
    &-dev-react { color: change-color($color-accent, $hue: 190); }
    &-dev-javascript_badge { color: change-color($color-accent, $hue: 50); }
+   &-dev-mysql { color: change-color($color-accent, $hue: 190); }
    &-dev-illustrator { color: change-color($color-accent, $hue: 40); }
    &-dev-html5 { color: change-color($color-accent, $hue: 15); }
    &-dev-ubuntu, &-linux-ubuntu_inverse { color: change-color($color-accent, $hue: 15); }
@@ -66,6 +68,7 @@ body {
    &-dev-vim { color: change-color($color-accent, $hue: 78); }
    &-dev-mongodb { color: change-color($color-accent, $hue: 130); }
    &-dev-nodejs_small { color: change-color($color-accent, $hue: 110); }
+   &-fa-paint_brush { color: change-color($color-accent, $hue: 290); }
    &-dev-angular { color: $color-accent; }
    &-dev-apple { color: #FFF; }
    &-dev-linux { color: #FFF; }
@@ -95,6 +98,12 @@ body {
 }
 
 #portfolio {
+  h1 {
+    font-size: 2em;
+    line-height: 2em;
+    text-align: center;
+    font-weight: $font-bold;
+  }
   width: 100%;
   .wrapper {
     display: flex;
@@ -110,6 +119,7 @@ body {
     position: relative;
 
     img {
+      border-radius: 3px;
       width: 100%;
       display: block;
     }
@@ -142,7 +152,7 @@ body {
         position: relative;
         top: 4px;
         font-size: 20px;
-        padding: 0 1px;
+        padding: 0 2px;
       }
     }
   }
