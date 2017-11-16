@@ -18,7 +18,7 @@
         <div class="wrapper">
         {% for project in site.categories.portfolio %}
           <div class="item">
-            <img src="http://placehold.it/200x150" />
+            <img src="{{ "/assets/img/projects/" | append: project.permalink }}/thumbnail.png" />
             <aside>
               <div class="features">
                 {% for feature in project.tools %}
