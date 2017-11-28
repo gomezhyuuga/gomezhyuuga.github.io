@@ -108,7 +108,7 @@ body {
   .wrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
   }
   .item {
     border: 1px solid $primary-color;
