@@ -29,6 +29,20 @@ markdown: kramdown
 #theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-analytics
+
+# Jekyll Analytics
+jekyll_analytics: 
+  GoogleAnalytics:          # Add, if you want to track with Google Analytics
+    id: UA-7199274-8        # Required - replace with your tracking id
+    anonymizeIp: false      # Optional - Default: false - set to true for anonymized tracking
+
+  # Piwik:                    # Add, if you want to track with Piwik
+  #   url: piwik.example.com  # Required - url to piwik installation without trailing /
+  #   siteId: "1234"          # Required - replace with your piwik site id (Write id as string)
+
+  # MPulse:                   # Add if you want to track performance with mPulse
+  #   apikey: XXXXX-YYYYY-ZZZZZ-AAAAA-23456   # Required - replace with your mPulse API key
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
