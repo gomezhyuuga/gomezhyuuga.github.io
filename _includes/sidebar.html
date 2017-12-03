@@ -7,7 +7,6 @@
     <div class="name">
       <strong>Fernando G&oacute;mez</strong>
       <small>MSc. Software Engineer</small>
-      <span></span>
     </div>
   </div>
   <div class="info">
@@ -15,7 +14,7 @@
       Web developer, consultant and machine learning enthusiast
       located at <a href="https://www.pinterest.com.mx/explore/cdmx/" class="cdmx">CD<span>MX</span></a>
     </p>
-    <p class="center">Work process summary:</p>
+    <p class="center">Building products using:</p>
     <p class="feature">
       <i class="nf nf-dev-vim"></i> +
       <i class="animated nf nf-oct-ruby active"></i>
@@ -29,21 +28,29 @@
       <li>
         <a href="#">Blog</a>
       </li>
-      <li><a class="active-{{ 1 == 2 }}" href="#">Portfolio</a></li>
-      <li><a href="{{ 'assets/box/resume.pdf' | relative_url }}">Resume</a></li>
+      <li>
+        {% if page.layout == 'home' %}
+          <a class="active" href="#">
+        {% else %}
+          <a href="#">
+        {% endif %}
+          Portfolio
+        </a>
+      </li>
+      <li><a href="{{ site.resume | relative_url }}">Resume</a></li>
     </ul>
 
-    <ul class="submenu">
-      <li> <a href="#" class="active">All</a> </li>
-      <li> <a href="#">Development</a> </li>
-      <li> <a href="#">Data Science</a> </li>
-      <li> <a href="#">Design</a> </li>
-    </ul>
+    <!-- <ul class="submenu"> -->
+    <!--   <li> <a href="#" class="active">All</a> </li> -->
+    <!--   <li> <a href="#">Development</a> </li> -->
+    <!--   <li> <a href="#">Data Science</a> </li> -->
+    <!--   <li> <a href="#">Design</a> </li> -->
+    <!-- </ul> -->
   </nav>
   <div class="social">
-    <a href="http://www.linkedin.com/in/gomezhyuuga"><i class="nf nf-fa-linkedin"></i></a>
-    <a href="https://github.com/gomezhyuuga"><i class="nf nf-fa-github"></i></a>
-    <a href="https://twitter.com/GomezHyuuga"><i class="nf nf-fa-twitter"></i></a>
-    <a href="mailto:gomezhyuuga@gmail.com"><i class="nf nf-fa-envelope"></i></a>
+    <a href="http://www.linkedin.com/in/{{ site.user_linkedin }}"><i class="nf nf-fa-linkedin"></i></a>
+    <a href="https://github.com/{{ site.user_github }}"><i class="nf nf-fa-github"></i></a>
+    <a href="https://twitter.com/{{ site.user_twitter }}"><i class="nf nf-fa-twitter"></i></a>
+    <a href="mailto:{{ site.email }}"><i class="nf nf-fa-envelope"></i></a>
   </div>
 </div>

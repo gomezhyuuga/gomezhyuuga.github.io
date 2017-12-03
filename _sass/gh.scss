@@ -85,7 +85,7 @@ body {
   display: flex;
   flex: 1;
   position: relative;
-  padding: 4em 3em;
+  padding: 4em 1em 0 1em;
   overflow: scroll;
   @media screen and (max-width: $breakpoint-tablet - 1px) {
     overflow: visible;

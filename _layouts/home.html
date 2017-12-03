@@ -1,3 +1,44 @@
 ---
-layout: portfolio
 ---
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% include head.html %}
+
+  <body>
+
+    {% include sidebar.html %}
+
+    <main id="page-content">
+      <div class="flag-container">
+        <div class="single-flag">
+          <span></span>
+        </div>
+      </div>
+
+      <div id="portfolio">
+        <h1>Portfolio</h1>
+        <div class="wrapper">
+        {% for project in site.categories.portfolio %}
+          <div class="item">
+            <a href="{{ project.link }}" target="_blank" rel="follow">
+              <img src="{{ "/assets/img/projects/" | append: project.permalink }}/thumbnail.png" />
+            </a>
+            <aside>
+              <div class="features">
+                {% for feature in project.tools %}
+                <span class="nf nf-{{ feature }}"></span>
+                {% endfor %}
+              </div>
+              {{ project.title }}
+            </aside>
+          </div>
+        {% endfor %}
+        </div>
+        {{ content }}
+      </div>
+    </main>
+
+  <script src="{{ "/assets/js/main.js" | relative_url }}"></script>
+  </body>
+</html>
