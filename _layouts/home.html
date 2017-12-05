@@ -21,7 +21,7 @@
         <div class="wrapper">
         {% for project in site.categories.portfolio %}
           <div class="item">
-            <a href="{{ project.link }}" target="_blank" rel="follow">
+            <a href="{{ project.permalink }}" rel="follow">
               <img src="{{ "/assets/img/projects/" | append: project.permalink }}/thumbnail.png" />
             </a>
             <aside>

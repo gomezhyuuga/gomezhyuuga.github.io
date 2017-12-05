@@ -3,7 +3,9 @@
     <div class='mexican-flag'><span></span><span></span><span></span></div>
   </div>
   <div class="brand">
-    <div class="logo"></div>
+    <a href="{{ site.url }}">
+      <div class="logo"></div>
+    </a>
     <div class="name">
       <strong>Fernando G&oacute;mez</strong>
       <small>MSc. Software Engineer</small>
@@ -29,11 +31,7 @@
         <a href="#">Blog</a>
       </li>
       <li>
-        {% if page.layout == 'home' %}
-          <a class="active" href="#">
-        {% else %}
-          <a href="#">
-        {% endif %}
+        <a class="active" href="{{ site.url }}">
           Portfolio
         </a>
       </li>

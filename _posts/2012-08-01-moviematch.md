@@ -1,4 +1,5 @@
 ---
+layout: portfolio
 title: Movie Match
 permalink: moviematch
 link: https://github.com/gomezhyuuga/MovieMatch

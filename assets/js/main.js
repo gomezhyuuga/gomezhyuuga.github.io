@@ -10,4 +10,8 @@ $(document).ready(() => {
     $(next).addClass('fadeIn active');
     index++;
   }, 2000);
+
+  $('.chocolat-parent').Chocolat({
+    container: '#page-content'
+  });
 });
