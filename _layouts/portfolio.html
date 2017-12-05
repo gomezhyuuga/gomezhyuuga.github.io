@@ -15,66 +15,68 @@
     {% include sidebar.html %}
 
     <section id="page-content" class="portfolio">
-      <a href="{{ site.url }}" class="back">
-      <span class="nf nf-fa-chevron_circle_left"></span>
-      Back
-    </a>
-    <main id="item-content">
-      <div class="flag-container">
-        <div class="single-flag">
-          <span></span>
+      <div class="wrapper">
+        <a href="{{ site.url }}" class="back">
+          <span class="nf nf-fa-chevron_circle_left"></span>
+          Back
+        </a>
+        <main id="item-content">
+        <div class="flag-container">
+          <div class="single-flag">
+            <span></span>
+          </div>
         </div>
-      </div>
 
-      <div id="portfolio-content">
-        <div class="header">
-          <h1>{{ page.title }}</h1>
-          <a class="btn" href="{{ page.link }}">
-            <span class="nf nf-fa-external_link"></span>
-            View
-          </a>
-        </div>
-        <div class="featured">
-          <div class="info">
-            <p>
+        <div id="portfolio-content">
+          <div class="header">
+            <h1>{{ page.title }}</h1>
+            <a class="btn" href="{{ page.link }}" target="_blank">
+              <span class="nf nf-fa-external_link"></span>
+              View
+            </a>
+          </div>
+          <div class="featured">
+            <div class="info">
+              <p>
               <h3>
                 DATE:
                 <small>
-                {{ page.date | date: "%B" }}, {{ page.date | date: "%Y" }}
+                  {{ page.date | date: "%B" }}, {{ page.date | date: "%Y" }}
                 </small>
               </h3>
-            </p>
-            <p>
+              </p>
+              <p>
               <h3>TECHNOLOGIES</h3>
               <div class="features">
-                  {% for feature in page.tools %}
-                  <span class="nf nf-{{ feature }}"></span>
-                  {% endfor %}
+                {% for feature in page.tools %}
+                <span class="nf nf-{{ feature }}"></span>
+                {% endfor %}
               </div>
-            </p>
+              </p>
+            </div>
+            <div class="thumbnail">
+              <img src="{{ "/assets/img/projects/" | append: page.permalink }}/thumbnail.png" />
+            </div>
           </div>
-          <div class="thumbnail">
-            <img src="{{ "/assets/img/projects/" | append: page.permalink }}/thumbnail.png" />
+          <div class="description">
+            {{ content }}
           </div>
-        </div>
-        <div class="description">
-          Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum, neque sem pretium metus, quis mollis nisl nunc et massa. Vestibulum sed metus in lorem tristique ullamcorper id vitae erat. Nulla mollis sapien sollicitudin lacinia lacinia.
-        </div>
-        <div class="thumbs chocolat-parent" data-chocolat-title="{{ page.title }}">
-          {% for i in (1..page.thumbs) %}
-          {% capture imgsrc %}
-          {{ '/assets/img/projects/' | append: page.permalink | append: "/" | append: i | append: ".png" }}
-          {% endcapture %}
+          <div class="thumbs chocolat-parent" data-chocolat-title="{{ page.title }}">
+            {% for i in (1..page.thumbs) %}
+            {% capture imgsrc %}
+            {{ '/assets/img/projects/' | append: page.permalink | append: "/" | append: i | append: ".png" }}
+            {% endcapture %}
             <figure class="image">
               <a href="{{ imgsrc }}"
                  class="chocolat-image">
                 <img src="{{ imgsrc }}" />
               </a>
             </figure>
-          {% endfor %}
+            {% endfor %}
+          </div>
         </div>
+        </main>
       </div>
-    </main>
     </section>
 
     <script src="{{ "/assets/js/main.js" | relative_url }}"></script>

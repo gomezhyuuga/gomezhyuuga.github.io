@@ -41,7 +41,7 @@ body {
   display: flex;
   font-family: $font-stack;
   font-weight: $font-regular;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 18px;
   @media screen and (max-width: $breakpoint-tablet - 1px) {
     flex-flow: column;
@@ -104,7 +104,14 @@ a { @include transition(all .1s linear); }
       font-weight: $font-bold;
       &:hover { color: $color-accent; }
     }
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+    }
     main {
+      max-width: 768px;
+      min-width: 300px;
       position: relative;
       background-color: #fff;
       border: 1px solid darken($primary-color, 10%);
@@ -400,6 +407,7 @@ a { @include transition(all .1s linear); }
     display: flex;
     justify-content: space-between;
     .info {
+      margin-right: 2em;
       flex: 1;
       color: $color-gray20;
       small {
@@ -408,16 +416,15 @@ a { @include transition(all .1s linear); }
       }
       h3 {
         font-weight: 800;
-        font-size: 0.8em;
+        font-size: 0.9em;
         margin-bottom: 5px;
       }
       .features {
         display: flex;
-        // justify-content: space-around;
         margin-bottom: 1em;
       }
       .nf {
-        font-size: 1.5em;
+        font-size: 2em;
         padding: 2px;
         margin-right: 1em;
         color: $color-gray20 !important;
@@ -432,6 +439,7 @@ a { @include transition(all .1s linear); }
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: end;
     figure {
       margin-bottom: 1em;
       max-width: 150px;
@@ -440,6 +448,12 @@ a { @include transition(all .1s linear); }
     img {
       border: 1px solid rgba(0, 0, 0, 0.5);
       box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+    }
+  }
+  .description {
+    p {
+      margin-bottom: 1em;
+      text-align: justify;
     }
   }
 }
