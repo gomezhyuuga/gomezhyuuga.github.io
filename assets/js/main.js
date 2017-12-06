@@ -12,6 +12,6 @@ $(document).ready(() => {
   }, 2000);
 
   $('.chocolat-parent').Chocolat({
-    container: '#page-content'
+    // container: '#page-content'
   });
 });
