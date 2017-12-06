@@ -451,6 +451,11 @@ a { @include transition(all .1s linear); }
     }
   }
   .description {
+    iframe {
+      border: 1px solid $primary-color;
+      display: block;
+      margin: 0 auto 1em auto;
+    }
     p {
       margin-bottom: 1em;
       text-align: justify;

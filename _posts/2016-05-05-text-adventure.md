@@ -9,6 +9,9 @@ thumbs: 6
 tools: [ oct-ruby ]
 ---
 
+<iframe src="https://player.vimeo.com/video/246042474" width="640" height="491" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<p><a href="https://vimeo.com/246042474">Text Adventure Game</a> from <a href="https://vimeo.com/user45514582">Fernando G&oacute;mez Herrera</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
 This is a Ruby web application that allows playing the
 revised and improved version of “Werewolves and Wanderer”
 text adventure game as explained by Tim Hartnell in the
