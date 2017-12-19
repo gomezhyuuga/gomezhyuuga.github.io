@@ -1,3 +1,4 @@
+const QUOTES_API = 'http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1';
 $(document).ready(() => {
   let icons = $('.animated.nf');
   var index = 1;
@@ -14,5 +15,25 @@ $(document).ready(() => {
   $('.chocolat-parent').Chocolat({
     // container: '#page-content'
   });
+
+  let quote_element = $('#quote');
+  if (quote_element) {
+    $.getJSON(QUOTES_API)
+      .done(response => {
+        console.log(response[0])
+        let quote = response.pop();
+        let source = undefined;
+        let { content, title, custom_meta } = quote;
+        quote_element.html(content);
+        if (custom_meta) source = $(custom_meta.Source);
+        let author_element = $('#quote_author');
+        if (source) {
+          author_element.attr('href', source.attr('href'))
+        } else {
+          author_element.attr('href', quote.link);
+        }
+        author_element.text(`- ${title}`);
+      });
+  }
 });
 

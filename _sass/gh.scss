@@ -136,6 +136,19 @@ a { @include transition(all .1s linear); }
     font-weight: $font-bold;
   }
   width: 100%;
+
+  .quote {
+    padding: 0 4em;
+    .text {
+      font-style: italic;
+      font-size: 2em;
+      line-height: 1.2em;
+      font-weight: 200;
+    }
+    .author {
+      font-weight: $font-bold;
+    }
+  }
   .wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -486,3 +499,4 @@ a { @include transition(all .1s linear); }
   }
 }
 .border { border: 1px solid $primary-color; }
+
