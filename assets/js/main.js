@@ -1,4 +1,4 @@
-const QUOTES_API = 'http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1';
+const QUOTES_API = '//quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1';
 $(document).ready(() => {
   let icons = $('.animated.nf');
   var index = 1;
