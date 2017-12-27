@@ -20,7 +20,6 @@ $(document).ready(() => {
   if (quote_element) {
     $.getJSON(QUOTES_API)
       .done(response => {
-        console.log(response[0])
         let quote = response.pop();
         let source = undefined;
         let { content, title, custom_meta } = quote;
