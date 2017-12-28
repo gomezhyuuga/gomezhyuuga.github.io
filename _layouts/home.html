@@ -37,7 +37,11 @@
                 <span class="nf nf-{{ feature }}"></span>
                 {% endfor %}
               </div>
-              {{ project.title }}
+                {% if project.short_title %}
+                    {{ project.short_title }}
+                {% else %}
+                    {{ project.title }}
+                {% endif %}
             </aside>
           </div>
         {% endfor %}
