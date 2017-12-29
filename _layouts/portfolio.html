@@ -34,6 +34,7 @@
             <h1>{{ page.title }}</h1>
             {% if page.track_link %}
               <a class="btn"
+                 ga-on='click'
                  ga-event-category='{{ page.ga_category }}'
                  ga-event-action='{{ page.ga_action }}'
                  ga-event-label='{{ page.ga_label }}'
