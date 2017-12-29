@@ -3,6 +3,10 @@ layout: portfolio
 title: A Quartile-Based Hyper-Heuristic for Solving the 0/1 Knapsack Problem
 short_title: Hyper-Heuristic Knapsack
 link: "/assets/box/iqr-knapsack.pdf"
+track_link: true
+ga_category: "Downloads"
+ga_action: "PDF"
+ga_label: "iqr-knapsack.pdf"
 categories: portfolio science
 permalink: IQR-knapsack
 thumbs: 2

@@ -32,7 +32,15 @@
         <div id="portfolio-content">
           <div class="header">
             <h1>{{ page.title }}</h1>
-            <a class="btn" href="{{ page.link }}" target="_blank">
+            {% if page.track_link %}
+              <a class="btn"
+                 ga-event-category='{{ page.ga_category }}'
+                 ga-event-action='{{ page.ga_action }}'
+                 ga-event-label='{{ page.ga_label }}'
+                href="{{ page.link }}" target="_blank">
+            {% else %}
+              <a class="btn" href="{{ page.link }}" target="_blank">
+            {% endif %}
               <span class="nf nf-fa-external_link"></span>
               View
             </a>

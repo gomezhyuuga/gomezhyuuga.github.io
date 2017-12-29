@@ -35,7 +35,12 @@
           Portfolio
         </a>
       </li>
-      <li><a href="{{ site.resume | relative_url }}">Resume</a></li>
+      <li>
+        <a href="{{ site.resume | relative_url }}"
+           ga-event-category='Download'
+           ga-event-action='PDF'
+           ga-event-label='resume.pdf'>Resume</a>
+      </li>
     </ul>
 
     <!-- <ul class="submenu"> -->
