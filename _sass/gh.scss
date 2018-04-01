@@ -103,13 +103,34 @@ a { @include transition(all .1s linear); }
     font-weight: $font-bold;
     &:hover { color: $color-accent; }
   }
-  &.blog {
+  &.post {
     flex-direction: column;
     background-color: $primary-color;
     padding: 2em 2em 0 2em;
     .wrapper {
       display: flex;
       flex-direction: column;
+    }
+    aside {
+      margin-bottom: 1em;
+      color: #FFF;
+
+      .wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+      }
+      .nf-fa-tags {
+        font-size: 0.75rem;
+        line-height: 1.5;
+        height: 2em;
+      }
+
+      .tag {
+        background: none;
+        font-weight: bold;
+        color: #e68f44;
+      }
     }
     article {
       // max-width: 768px;

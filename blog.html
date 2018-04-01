@@ -1,5 +1,7 @@
 ---
-layout: blog
+permalink: /blog_new
+layout: default
+class: blog
 ---
 
 <ul>
@@ -8,7 +10,7 @@ layout: blog
     <li>
         {{ post.ttitle }}
     <p><small><strong>{{ post.date | date: "%B %e, %Y" }}</strong> . {{ post.category }} .
-        <a href="http://erjjones.github.com{{ post.url }}#disqus_thread"></a></small></p>			
+        </small></p>			
     </li>
 {% endfor %}	
 </ul>

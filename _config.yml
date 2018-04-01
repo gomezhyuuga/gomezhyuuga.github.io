@@ -21,6 +21,14 @@ plugins:
   - jekyll-feed
 
 google_analytics: UA-7199274-8
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

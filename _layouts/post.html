@@ -1,0 +1,63 @@
+---
+class: blog
+---
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: " en " }}">
+<head>
+    {% include head.html %}
+    <style>
+        #sidebar {
+            position: unset;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    {% include sidebar.html %}
+
+    <section id="page-content" class="post">
+        <div class="wrapper">
+            <a href="{{ site.baseurl }}{% link blog.html %}" class="back">
+                <span class="nf nf-fa-chevron_circle_left"></span>
+                All posts
+            </a>
+            <aside>
+                <div class="wrapper">
+
+                    <div class="post-date">
+                        <i class="nf nf-fa-calendar"></i>
+                        {{ page.date | date: '%B %d, %Y' }}
+                        - {{ page.author }}
+                    </div>
+
+                    {% if page.categories.size > 0 %}
+                        <div class="tags">
+                            <i class="nf nf-fa-tags"></i>
+                            {% for category in page.categories %}
+                                <a class="tag is-link" href="{{site.baseurl}}/categories/{{category|slugize}}">
+                                    {{category}}
+                                </a>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+            </aside>
+
+            <article>
+                <div class="flag-container"><div class="single-flag"><span></span></div></div>
+
+                <header>
+                    <h1 class="title">{{ page.title }}</h1>
+                </header>
+
+                <div class="content">
+                    {{ content }}
+                </div>
+            </article>
+        </div> <!-- END WRAPPER -->
+    </section>
+
+    <script src="{{ "/assets/js/main.js" | relative_url }}"></script>
+</body>
+</html>

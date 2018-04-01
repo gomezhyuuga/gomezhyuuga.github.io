@@ -29,9 +29,9 @@
     <ul class="main">
       <li>
         {% if layout.class == "blog" %}
-          <a class="active" href="/blog">Blog</a>
+          <a class="active" href="{{ site.baseurl }}{% link blog.html %}">Blog</a>
         {% else %}
-          <a href="/blog">Blog</a>
+          <a href="{{ site.baseurl }}{% link blog.html %}">Blog</a>
         {% endif %}
       </li>
       <li>
