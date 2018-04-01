@@ -28,12 +28,22 @@
   <nav>
     <ul class="main">
       <li>
-        <a href="#">Blog</a>
+        {% if layout.class == "blog" %}
+          <a class="active" href="/blog">Blog</a>
+        {% else %}
+          <a href="/blog">Blog</a>
+        {% endif %}
       </li>
       <li>
-        <a class="active" href="{{ site.url }}">
-          Portfolio
-        </a>
+        {% if layout.class == "portfolio" %}
+          <a class="active" href="{{ site.url }}">
+            Portfolio
+          </a>
+        {% else %}
+          <a href="{{ site.url }}">
+            Portfolio
+          </a>
+        {% endif %}
       </li>
       <li>
         <a href="{{ site.resume | relative_url }}"

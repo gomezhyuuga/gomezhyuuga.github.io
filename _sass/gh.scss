@@ -84,6 +84,8 @@ a { @include transition(all .1s linear); }
 .center { text-align: center !important; }
 .light { font-weight: $font-light !important; }
 
+.highlighter-rouge { margin-bottom: 1em }
+
 #page-content {
   display: flex;
   flex: 1;
@@ -93,17 +95,47 @@ a { @include transition(all .1s linear); }
   @media screen and (max-width: $breakpoint-tablet - 1px) {
     overflow: visible;
   }
+  
+  .back, .back_btn {
+    margin-bottom: 1em;
+    color: $color-orange;
+    font-size: 1.5em;
+    font-weight: $font-bold;
+    &:hover { color: $color-accent; }
+  }
+  &.blog {
+    flex-direction: column;
+    background-color: $primary-color;
+    padding: 2em 2em 0 2em;
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+    article {
+      // max-width: 768px;
+      min-width: 300px;
+      position: relative;
+      background-color: #fff;
+      border: 1px solid darken($primary-color, 10%);
+      border-radius: 4px;
+      margin-bottom: 3em;
+      padding: 2em;
+
+      .flag-container span {
+        border: 1px solid darken($primary-color, 10%);
+      }
+      header {
+        border-bottom: 1px solid $color-gray;
+        padding-bottom: 1em;
+        margin-bottom: 2em;
+        h1 { font-weight: bold; }
+      }
+    }
+  }
   &.portfolio {
     flex-direction: column;
-    padding: 4em;
     background-color: $primary-color;
-    .back {
-      margin-bottom: 1em;
-      color: $color-orange;
-      font-size: 1.5em;
-      font-weight: $font-bold;
-      &:hover { color: $color-accent; }
-    }
+    padding: 4em;
     .wrapper {
       display: flex;
       flex-direction: column;
@@ -121,6 +153,7 @@ a { @include transition(all .1s linear); }
         border: 1px solid darken($primary-color, 10%);
       }
     }
+    header h1 { font-weight: bold }
   }
 }
 .single-flag span {
@@ -223,6 +256,7 @@ a { @include transition(all .1s linear); }
       margin: 1em 0;
       justify-content: center;
     }
+    min-height: 4em;
     margin: 4em 0 1em 0;
     display: flex;
     align-items: center;
@@ -354,6 +388,7 @@ a { @include transition(all .1s linear); }
   line-height: 0px;
   height: 4px;
   width: 100%;
+  z-index: 4;
   div {
     height: 100%;
     width: 100%;

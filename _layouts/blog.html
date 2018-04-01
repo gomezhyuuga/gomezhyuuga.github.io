@@ -1,0 +1,41 @@
+---
+class: blog
+---
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: " en " }}">
+<head>
+    {% include head.html %}
+    <style>
+        #sidebar {
+            position: unset;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    {% include sidebar.html %}
+
+    <section id="page-content" class="blog">
+        <div class="wrapper">
+            <!-- <a href="{{ site.url }}" class="back">
+                <span class="nf nf-fa-chevron_circle_left"></span>
+                Back
+            </a> -->
+
+            <article>
+                <div class="flag-container"><div class="single-flag"><span></span></div></div>
+
+                <header>
+                    <h1 class="title">{{ page.title }}</h1>
+                </header>
+
+                <div class="content">
+                    {{ content }}
+                </div>
+            </article>
+        </div> <!-- END WRAPPER -->
+    </section>
+
+</body>
+</html>
