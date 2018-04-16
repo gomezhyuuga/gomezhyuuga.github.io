@@ -28,7 +28,7 @@
   <nav>
     <ul class="main">
       <li>
-        {% if layout.class == "blog" %}
+        {% if layout.class contains "blog" %}
           <a class="active" href="{{ site.baseurl }}{% link blog.html %}">Blog</a>
         {% else %}
           <a href="{{ site.baseurl }}{% link blog.html %}">Blog</a>

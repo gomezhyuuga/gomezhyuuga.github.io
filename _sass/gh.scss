@@ -35,8 +35,10 @@ $item-height: $item-width * 0.7;
 
 $breakpoint-tablet: 768px;
 
+html, body {
+  background-color: #2C3E50;
+}
 body {
-  background-color: #FFFFFF;
   height: 100vh;
   display: flex;
   font-family: $font-stack;
@@ -103,6 +105,25 @@ a { @include transition(all .1s linear); }
     font-weight: $font-bold;
     &:hover { color: $color-accent; }
   }
+
+  &.blog.listing {
+    flex-direction: column;
+    background-color: $primary-color;
+    padding: 3em;
+
+    .post-card {
+      margin-bottom: 2em;
+      border-radius: 2px;
+      .flag-container {
+        border-top-left-radius: 2px;
+        border-top-right-radius: 2px;
+      }
+      .card-header {
+        padding-top: 0.5em;
+      }
+    }
+  }
+
   &.post {
     flex-direction: column;
     background-color: $primary-color;
@@ -157,6 +178,9 @@ a { @include transition(all .1s linear); }
     flex-direction: column;
     background-color: $primary-color;
     padding: 4em;
+    @media screen and (max-width: $breakpoint-tablet - 1px) {
+      padding: 1em;  
+    }
     .wrapper {
       display: flex;
       flex-direction: column;
@@ -207,6 +231,7 @@ a { @include transition(all .1s linear); }
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 2em;
   }
   .item {
     border: 1px solid $primary-color;
@@ -558,3 +583,8 @@ a { @include transition(all .1s linear); }
 }
 .border { border: 1px solid $primary-color; }
 
+.content {
+  code {
+    border-radius: 3px;
+  }
+}

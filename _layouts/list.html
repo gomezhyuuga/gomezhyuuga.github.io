@@ -1,0 +1,63 @@
+---
+class: blog listing
+layout: default
+---
+<style>
+    #sidebar {
+        position: unset;
+        z-index: 1;
+    }
+</style>
+
+<a href="{{ site.baseurl }}{% link blog.html %}" class="back">
+    Stories       
+</a>
+
+{% for post in site.posts %}
+{% if post.categories contains "portfolio" %}
+{% continue %}
+{% else %}
+<div class="card post-card">
+    <header class="card-header">
+        <div class="flag-container"><div class="single-flag"><span></span></div></div>
+        <h2 class="title is-4 card-header-title">
+            <a href="{{ post.url }}">
+                {{ post.title }}
+            </a>
+        </h2>
+    </header>
+
+    <div class="card-content">
+        <div class="content">
+            {{ post.excerpt }}
+        </div>
+    </div>
+
+    <footer class="card-footer">
+        <div class="card-footer-item">
+            <a href="{{ post.url }}">
+                <span class="icon"><i class="nf nf-fae-book_open"></i></span>
+                Read more...
+            </a>
+        </div>
+
+        <div class="card-footer-item">
+            <span class="icon ">
+                <i class="nf nf-fa-calendar"></i>
+            </span>
+            <time datetime="{{ post.date | date: "%Y-%m-%d" }}">
+                {{ post.date | date: "%B %e, %Y" }}
+            </time>
+        </div>
+        {% if post.categories.size > 0 %}
+        <div class="tags card-footer-item">
+            {% for category in post.categories %}
+            <span class="tag is-info"> {{ category }} </span>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </footer>
+</div>
+{% endif %}
+
+{% endfor %}
