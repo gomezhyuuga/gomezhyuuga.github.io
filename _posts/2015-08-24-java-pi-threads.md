@@ -30,20 +30,22 @@ cálculo de la anterior aproximación. El objetivo era resolverlo primero
 de manera secuencial y posteriormente de forma paralela. Como paso final
 se compararon ambos resultados y su **tiempo de ejecución**.
 
-> **Note**
-> 
-> Los programas se probaron en una computadora de escritorio con las
-> siguientes características:
-> 
->   - Procesador Intel® Core™ i7-3615QM CPU @ 2.30GHz con cuatro núcleos
->     y ocho *hyperthreads*.
-> 
->   - RAM: 8 GB 1600 MHz DDR3
-> 
->   - Sistema operativo OS X El Capitan 10.11 Beta (15A262e), Kernel
->     Darwin Version 15.0.0
-> 
->   - Compilador Java 1.8.0\_60-b27 de Oracle.
+{% capture note %}
+ Los programas se probaron en una computadora de escritorio con las
+ siguientes características:
+ 
+   - Procesador Intel® Core™ i7-3615QM CPU @ 2.30GHz con cuatro núcleos
+     y ocho *hyperthreads*.
+ 
+   - RAM: 8 GB 1600 MHz DDR3
+ 
+   - Sistema operativo OS X El Capitan 10.11 Beta (15A262e), Kernel
+     Darwin Version 15.0.0
+ 
+   - Compilador Java 1.8.0\_60-b27 de Oracle.
+{% endcapture %}
+
+{% include note.html body=note %}
 
 # Solución secuencial
 
