@@ -14,11 +14,22 @@ user_linkedin: gomezhyuuga
 user_twitter: GomezHyuuga
 user_github:  gomezhyuuga
 
+encoding: utf-8
+
+# Permalinks
+permalink: /:year/:month/:day/:title
+
 # Build settings
 markdown: kramdown
+# kramdown:
+#   math_engine: sskatex
+#   math_engine_opts:
+#     katex_js: '/katex/katex.min.js'
+
 #theme: minima
 plugins:
   - jekyll-feed
+  # - jekyll-asciidoc
 
 google_analytics: UA-7199274-8
 
