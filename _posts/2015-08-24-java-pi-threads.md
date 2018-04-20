@@ -1,6 +1,6 @@
 ---
 title: "Calculando Pi con Threads en java"
-categories: lab
+categories: java parallelism
 excerpt_separator: <!--more-->
 ---
 {% include katex.html %}
