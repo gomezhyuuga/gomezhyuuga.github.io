@@ -41,6 +41,11 @@ $$T_x$$ means the runtime by executing the code using $$x$$ threads.
 As you can see, there is a great improvement on the execution time. The _parallel_ version works
 almost __5.5x__ times faster than the _sequential_ version.
 
+<a href ="https://github.com/gomezhyuuga/web-workers">
+<span class='icon'><i class='nf nf-fa-external_link_square'></i></span>
+Github Code
+</a>
+
 [WebWorkers]: https://developer.mozilla.org/es/docs/Web/API/Web_Workers_API
 [Coprime]: https://en.wikipedia.org/wiki/Coprime_integers
 [Euclids]: https://en.wikipedia.org/wiki/Euclidean_algorithm
