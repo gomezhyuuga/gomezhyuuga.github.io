@@ -8,7 +8,6 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
-    asciidoctor (1.5.6.2)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
@@ -92,9 +91,6 @@ GEM
       pathutil (~> 0.9)
       rouge (>= 1.7, < 3)
       safe_yaml (~> 1.0)
-    jekyll-asciidoc (2.1.0)
-      asciidoctor (>= 1.5.0)
-      jekyll (>= 2.3.0)
     jekyll-avatar (0.5.0)
       jekyll (~> 3.0)
     jekyll-coffeescript (1.1.1)
@@ -107,6 +103,8 @@ GEM
       commonmarker (~> 0.17.6)
       jekyll-commonmark (~> 1)
       rouge (~> 2)
+    jekyll-compose (0.8.0)
+      jekyll (~> 3.0)
     jekyll-default-layout (0.1.4)
       jekyll (~> 3.0)
     jekyll-feed (0.9.3)
@@ -243,7 +241,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll (~> 3.6.2)
-  jekyll-asciidoc
+  jekyll-compose
   jekyll-feed (~> 0.6)
   minima (~> 2.0)
   nokogiri (~> 1.8.2)

@@ -1,10 +1,9 @@
 ---
-title: "Práctica #1: Calculando Pi con Threads en java"
+title: "Calculando Pi con Threads en java"
 categories: lab
+excerpt_separator: <!--more-->
 ---
 {% include katex.html %}
-# Introducción
-
 PI es un número irracional, una **constante** utilizada en múltiples
 áreas de la ciencia y las matemáticas. En geometría euclidiana, se
 describe como la relación entre la longitud de una circunferencia y su
@@ -22,6 +21,8 @@ diferentes métodos para aproximar su valor. Uno de ellos es mediante
 $$
 \pi = \int_{0}^{1} \frac{4}{1 + x^2} dx
 $$
+
+<!--more-->
 
 En esta práctica se tomó como base el código en C de
 [ComputingPi][ComputingPi] y se desarrollaron dos programas para el
