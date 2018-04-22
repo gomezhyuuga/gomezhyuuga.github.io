@@ -3,7 +3,7 @@ layout: portfolio
 title: Beastly Coprimes
 link: https://gomezhyuuga.github.io/web-workers/
 categories: portfolio development
-permalink: web-workers
+permalink: beastly-coprimes
 date: 2015-08-31
 thumbs: 0
 tools: [dev-html5, dev-javascript_badge]
