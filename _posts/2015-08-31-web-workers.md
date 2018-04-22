@@ -10,7 +10,7 @@ tools: [dev-html5, dev-javascript_badge]
 ---
 {% include katex.html %}
 
-![Screencast]({{ "/assets/img/projects/web-workers/screencast.gif" | relative_url }} "Screencast")
+![Screencast]({{ "/assets/img/projects/beastly-coprimes/screencast.gif" | relative_url }} "Screencast")
 {: .image }
 
 Example of how to use __[Web Workers][WebWorkers]__
