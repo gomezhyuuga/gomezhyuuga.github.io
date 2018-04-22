@@ -10,9 +10,6 @@ tools: [dev-html5, dev-javascript_badge]
 ---
 {% include katex.html %}
 
-![Screencast]({{ "/assets/img/projects/beastly-coprimes/screencast.gif" | relative_url }} "Screencast")
-{: .image }
-
 Example of how to use __[Web Workers][WebWorkers]__
 on the browser and take advantage of parallel computing.
 For the sake of demonstration, a simple algorithm to compute [coprime numbers][Coprime] is presented. Specifically,
@@ -41,10 +38,22 @@ $$T_x$$ means the runtime by executing the code using $$x$$ threads.
 As you can see, there is a great improvement on the execution time. The _parallel_ version works
 almost __5.5x__ times faster than the _sequential_ version.
 
-<a href ="https://github.com/gomezhyuuga/web-workers">
-<span class='icon'><i class='nf nf-fa-external_link_square'></i></span>
-Github Code
+<figure class="image">
+    <img class="border" src="{{ "/assets/img/projects/beastly-coprimes/screencast.gif" | relative_url }}" alt="Screencast" />
+    <figcaption>
+        <a href="http://recordit.co/ZNkSmToEpz">
+            <span class='icon'><i class='nf nf-fa-video_camera'></i></span>
+            Screencast
+        </a>
+    </figcaption>
+</figure>
+
+
+<a href="https://github.com/gomezhyuuga/web-workers">
+    <span class='icon'><i class='nf nf-fa-external_link_square'></i></span>
+    Github Code
 </a>
+
 
 [WebWorkers]: https://developer.mozilla.org/es/docs/Web/API/Web_Workers_API
 [Coprime]: https://en.wikipedia.org/wiki/Coprime_integers
