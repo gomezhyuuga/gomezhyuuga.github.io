@@ -1,0 +1,20 @@
+<iframe class="is-flex" onload="frameLoaded()"
+  style="width: 100%; min-height: 600px;"
+  src="/notebooks/{{ include.nb }}"
+  frameborder="0"></iframe>
+
+
+<script>
+  function frameLoaded() {
+    var frame = $("iframe");
+    var height = frame.contents().height();
+    frame.height(height);
+  }
+</script>
+
+<style>
+    #notebook-container {
+        width: 100%;
+        margin: 0 !important;
+    }
+</style>
