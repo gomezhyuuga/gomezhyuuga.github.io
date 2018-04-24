@@ -212,7 +212,9 @@ tiempos.
 
 Tabla de tiempos de ejecución (expresados en segundos)
 
-S<sub>8</sub> = T<sub>1</sub> / T<sub>8</sub> = 26.759 / 3.510 = 7.6236
+$$
+S_8 = \frac{T_1}{T_8} = \frac{26.759}{3.510} = 7.6236
+$$
 
 Calculando el *speedup* podemos observar que el programa alcanzó un
 aumento **aproximado a 8x** en su desempeño respecto a la versión
