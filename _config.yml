@@ -44,6 +44,7 @@ markdown: kramdown
 
 #theme: minima
 plugins:
+  - jekyll-sitemap
   - jekyll-feed
   - jekyll-gist
   - jekyll-jupyter-notebook
