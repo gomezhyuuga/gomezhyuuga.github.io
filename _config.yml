@@ -49,6 +49,7 @@ plugins:
   - jekyll-gist
   - jekyll-jupyter-notebook
   - jekyll-seo-tag
+  - jekyll-autoprefixer
 
 
 # gist:

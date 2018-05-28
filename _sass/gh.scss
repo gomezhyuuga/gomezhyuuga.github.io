@@ -4,7 +4,7 @@
 }
 *, *:before, *:after {
   /* Chrome 9-, Safari 5-, iOS 4.2-, Android 3-, Blackberry 7- */
-  -webkit-box-sizing: border-box; 
+  -webkit-box-sizing: border-box;
 
   /* Firefox (desktop or Android) 28- */
   -moz-box-sizing: border-box;
@@ -88,6 +88,8 @@ a { @include transition(all .1s linear); }
 
 .highlighter-rouge { margin-bottom: 1em }
 
+$mobile-padding: 0.5em;
+
 #page-content {
   display: flex;
   flex: 1;
@@ -97,7 +99,7 @@ a { @include transition(all .1s linear); }
   @media screen and (max-width: $breakpoint-tablet - 1px) {
     overflow: visible;
   }
-  
+
   .back, .back_btn {
     margin-bottom: 1em;
     color: $color-orange;
@@ -110,16 +112,44 @@ a { @include transition(all .1s linear); }
     flex-direction: column;
     background-color: $primary-color;
     padding: 3em;
+    @include mobile() {
+      padding: $mobile-padding;
+    }
 
     .post-card {
       margin-bottom: 2em;
       border-radius: 2px;
+      @include mobile {
+        padding: $mobile-padding;
+        padding-bottom: 0;
+        margin-bottom: 1em;
+        figure { margin: 0; }
+        iframe { width: 100% !important; }
+      }
+
       .flag-container {
         border-top-left-radius: 2px;
         border-top-right-radius: 2px;
       }
       .card-header {
         padding-top: 0.5em;
+        @include mobile {
+          padding-left: 0.5em;
+          .title {
+            padding-left: 0;
+          }
+        }
+      }
+      .card-content {
+        @include mobile {
+          padding: $mobile-padding;
+        }
+      }
+      .card-footer-item {
+        @include mobile {
+          padding: $mobile-padding;
+          font-size: 0.8em;
+        }
       }
     }
   }
@@ -128,11 +158,17 @@ a { @include transition(all .1s linear); }
     flex-direction: column;
     background-color: $primary-color;
     padding: 2em 2em 0 2em;
+    @include mobile {
+      padding: 0;
+    }
+
     .wrapper {
       display: flex;
       flex-direction: column;
     }
+    .back { padding-left: 16px; }
     aside {
+      padding: 0 16px;
       margin-bottom: 1em;
       color: #FFF;
 
@@ -162,6 +198,11 @@ a { @include transition(all .1s linear); }
       border-radius: 4px;
       margin-bottom: 3em;
       padding: 2em;
+      @include mobile {
+        padding: 2em 1em;
+        figure { margin: 0; }
+        iframe { width: 100% !important; }
+      }
 
       .flag-container span {
         border: 1px solid darken($primary-color, 10%);
@@ -172,6 +213,10 @@ a { @include transition(all .1s linear); }
         margin-bottom: 2em;
         h1 { font-weight: bold; }
       }
+
+      h2, h3 {
+        code { line-height: 2em; }
+      }
     }
   }
   &.portfolio {
@@ -179,7 +224,7 @@ a { @include transition(all .1s linear); }
     background-color: $primary-color;
     padding: 4em;
     @media screen and (max-width: $breakpoint-tablet - 1px) {
-      padding: 1em;  
+      padding: 1em;
     }
     .wrapper {
       display: flex;
