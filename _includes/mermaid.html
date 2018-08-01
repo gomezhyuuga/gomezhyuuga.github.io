@@ -1,0 +1,15 @@
+<script src='https://cdn.jsdelivr.net/npm/mermaid@8.0.0-rc.8/dist/mermaid.min.js'></script>
+<script>
+    mermaid.initialize({});
+    $(function(){
+        var element = document.querySelector(".language-mermaid").parentElement;
+        element.classList.add('mermaid-graph');
+
+        var insertSvg = function(svgCode, bindFunctions){
+            element.innerHTML = svgCode;
+        };
+
+        var graphDefinition = element.textContent;
+        var graph = mermaid.render('mermaid-graph', graphDefinition, insertSvg);
+    });
+</script>

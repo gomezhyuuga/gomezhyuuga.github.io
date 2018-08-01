@@ -633,3 +633,10 @@ $mobile-padding: 0.5em;
     border-radius: 3px;
   }
 }
+
+.mermaid-graph {
+  svg {
+    display: block;
+    margin: 0 auto;
+  }
+}
