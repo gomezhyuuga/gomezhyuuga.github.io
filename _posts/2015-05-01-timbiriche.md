@@ -7,6 +7,7 @@ permalink: dotsboxes
 date: 2015-05-01
 tools: [ dev-nodejs_small, dev-javascript_badge, dev-mongodb ]
 thumbs: 8
+thumbnail: "thumbnail.png"
 ---
 
 This is a very popular game called *Dots and Boxes* (*Timbiriche

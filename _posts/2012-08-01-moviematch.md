@@ -5,6 +5,7 @@ permalink: moviematch
 link: https://github.com/gomezhyuuga/MovieMatch
 categories: portfolio development
 tools: [dev-apple, custom-c]
+thumbnail: "thumbnail.png"
 ---
 
 iOS application published in the App Store. It lets you

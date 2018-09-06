@@ -6,6 +6,7 @@ date: 2016-07-08
 permalink: portfolio-risk
 link: https://invis.io/5U7WIFRY4
 thumbs: 3
+thumbnail: "thumbnail.png"
 tools: [ fa-laptop ]
 ---
 

@@ -6,6 +6,7 @@ categories: portfolio development
 permalink: text-adventure
 date: 2016-05-05
 thumbs: 6
+thumbnail: "thumbnail.png"
 tools: [ oct-ruby ]
 ---
 

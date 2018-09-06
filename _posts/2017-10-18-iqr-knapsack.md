@@ -10,6 +10,7 @@ ga_label: "iqr-knapsack.pdf"
 categories: portfolio science
 permalink: IQR-knapsack
 thumbs: 2
+thumbnail: "thumbnail.png"
 date: 2017-10-18
 tools: [ "fa-file_text" ]
 ---

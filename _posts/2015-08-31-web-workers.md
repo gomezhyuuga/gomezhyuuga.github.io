@@ -6,6 +6,7 @@ categories: portfolio development
 permalink: beastly-coprimes
 date: 2015-08-31
 thumbs: 0
+thumbnail: "thumbnail.png"
 tools: [dev-html5, dev-javascript_badge]
 ---
 {% include katex.html %}
