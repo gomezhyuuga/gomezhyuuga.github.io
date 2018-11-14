@@ -25,5 +25,8 @@ $ git config --global core.excludesfile ~/.dotfiles/gitignore
 
 **Done.**
 
-
 You can change the `~/.dotfiles/gitignore` path to wherever you have your global **.gitignore** file.
+
+
+
+**Error cause**: **email** field should be **unique**. It is not asked at user creation time and because of that, it’s saved as *blank* on the database. There is a current user with an empty email in the database, thus, it throws the violation of the *unique value constraint.*
