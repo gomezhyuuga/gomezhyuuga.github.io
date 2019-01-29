@@ -3,7 +3,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Fernando Gómez Personal Site
+title: Fernando Gómez (gomezhyuuga) Portfolio
 email: gomezhyuuga@gmail.com
 description: >
   Web developer, consultant and machine learning enthusiast located at CDMX.
@@ -47,8 +47,9 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-gist
-  - jekyll-jupyter-notebook
+#  - jekyll-jupyter-notebook
   - jekyll-seo-tag
+  - disqus-for-jekyll
   - jekyll-autoprefixer
 
 
@@ -65,6 +66,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      comments: true
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
