@@ -3,7 +3,7 @@ layout: portfolio
 title: Emails Input
 categories: portfolio development
 permalink: miro-emails-input
-link: https://miro-demo.gomezh.dev/
+link: https://emails-input-component.now.sh/
 date: 2020-03-09
 thumbs: 3
 thumbnail: "thumbnail.png"
